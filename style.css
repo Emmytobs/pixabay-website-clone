@@ -1,0 +1,72 @@
+html, head, body {
+    margin: 0;
+    padding: 0;
+}
+
+head, body {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #bfc2a9;
+}
+
+.inputContainer {
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    padding: 20px 12px;
+    background: #bfc2a9;
+    text-align: center;
+}
+
+.inputField {
+    
+}
+
+.categorySelect {
+    padding: 2px 5px;
+    background: #fff;
+    color: #74795a;
+}   
+
+.categorySelect option {
+    max-height: 10px;
+    overflow: auto;
+}
+
+.cardWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .cardWrapper {
+        display: block;
+    }
+} 
+
+.card {
+    margin: 20px;
+    border-radius: 6px;
+}
+
+.cardImage {
+    height: 250px;
+}
+
+.cardImage img {
+    width: 100%;
+    height: 100%;
+}
+
+.cardText {
+    background: #fff;
+    padding: 8px 12px
+}
+
+
+.noImagesIndicator {
+    display: none;
+}

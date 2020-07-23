@@ -8,6 +8,40 @@
 </head>
 <body>
     
+    <div class="container">
+        <form class="inputContainer">
+            <input class="inputField" type="text" placeholder="Enter search criteria">
+            <input class="numberOfImagesField" type="number" value=3 placeholder="Number of images">
+            <select class="categorySelect">
+                <option value="">All</option>
+                <option value="backgrounds">Backgrounds</option>
+                <option value="fashion">Fashion</option>
+                <option value="nature">Nature</option>
+                <option value="computer">Computer</option>
+                <option value="travel">Travel</option>
+                <option value="food">Food</option>
+            </select>
+            <button id="searchImages" class="searchButton">Search</button>
+        </form>
+        <!-- <div class="feed">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate alias excepturi sit eligendi aspernatur dolorem nesciunt consequatur sequi laboriosam?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate alias excepturi sit eligendi aspernatur dolorem nesciunt consequatur sequi laboriosam?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate alias excepturi sit eligendi aspernatur dolorem nesciunt consequatur sequi laboriosam?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate alias excepturi sit eligendi aspernatur dolorem nesciunt consequatur sequi laboriosam?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate alias excepturi sit eligendi aspernatur dolorem nesciunt consequatur sequi laboriosam?</p>
+            <p class="specialFeed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate alias excepturi sit eligendi aspernatur dolorem nesciunt consequatur sequi laboriosam?</p>
+            <span id="feed_observer_target">Ewo</span>
+            <h3 id="loading_indicator">Loading...</h3>
+        </div> -->
+
+        <div class="cardWrapper" id="cardWrapper">
+            <span id="insertRef"></span>
+        </div>
+        <div class="noImagesIndicator">
+            <p>You have no images to be displayed. Enter a search term or simply click on Add below</p>
+        </div>
+        <button id="fetch_more_images" >Add Images</button>
+    </div>
     <script src="./index.js"></script>
 </body>
 </html>
