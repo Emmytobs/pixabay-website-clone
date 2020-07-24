@@ -9,6 +9,10 @@ head, body {
     background-color: #bfc2a9;
 }
 
+.container {
+    margin: 0px auto 50px;
+}
+
 .inputContainer {
     width: 100%;
     top: 0;
@@ -18,10 +22,18 @@ head, body {
     padding: 20px 12px;
     background: #bfc2a9;
     text-align: center;
+    z-index: 3;
 }
 
-.inputField {
+/* .inputField {
     
+} */
+.div {
+    display: inline-block;
+}
+
+.div label, .div input {
+    display: block;
 }
 
 .categorySelect {
@@ -35,6 +47,26 @@ head, body {
     overflow: auto;
 }
 
+@media screen and (max-width: 600px) {
+    .inputContainer {
+        padding: 25px auto;
+    }
+    button#searchImages {
+        display: block;
+        width: 70px;
+        margin: 5px auto;
+    }
+    /* .d {
+        display: inline-block;
+        width: 70%;
+    } */
+
+} 
+
+section.cards {
+    margin-top: 100px;
+}
+
 .cardWrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -43,7 +75,8 @@ head, body {
 
 @media screen and (max-width: 600px) {
     .cardWrapper {
-        display: block;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(50px, 1fr));
     }
 } 
 
@@ -52,8 +85,17 @@ head, body {
     border-radius: 6px;
 }
 
+
+
 .cardImage {
     height: 250px;
+}
+
+@media screen and (max-width: 600px) {
+    .cardImage img {
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
 .cardImage img {
@@ -66,7 +108,38 @@ head, body {
     padding: 8px 12px
 }
 
+@media screen and (max-width: 600px) {
+    .card {
+        margin: 10px;
+    }
+}
+.howToBlurbText {
+    display: none;
+    margin: 0px auto;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .howToBlurbText {
+        width: 70%;
+        margin: 100px auto 0px;
+    }
+}
 
 .noImagesIndicator {
     display: none;
+    margin: 0px auto;
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: #bfc2a9;
+    z-index: 3;
 }

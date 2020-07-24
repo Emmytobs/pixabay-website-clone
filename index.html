@@ -8,40 +8,39 @@
 </head>
 <body>
     
+    
+
     <div class="container">
         <form class="inputContainer">
-            <input class="inputField" type="text" placeholder="Enter search criteria">
-            <input class="numberOfImagesField" type="number" value=3 placeholder="Number of images">
-            <select class="categorySelect">
-                <option value="">All</option>
-                <option value="backgrounds">Backgrounds</option>
-                <option value="fashion">Fashion</option>
-                <option value="nature">Nature</option>
-                <option value="computer">Computer</option>
-                <option value="travel">Travel</option>
-                <option value="food">Food</option>
-            </select>
-            <button id="searchImages" class="searchButton">Search</button>
+            <div class="div" for="">
+                <label><small>Enter search criteria</small></label>
+                <input class="inputField" type="text">
+            </div>
+            <div class="div" for="">
+                <label><small>Number of Images</small></label>
+                <input class="numberOfImagesField" type="number" value=3 min=3 max=10 >
+            </div>
+            <button type="submit" id="searchImages" class="searchButton">Search</button>
         </form>
-        <!-- <div class="feed">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate alias excepturi sit eligendi aspernatur dolorem nesciunt consequatur sequi laboriosam?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate alias excepturi sit eligendi aspernatur dolorem nesciunt consequatur sequi laboriosam?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate alias excepturi sit eligendi aspernatur dolorem nesciunt consequatur sequi laboriosam?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate alias excepturi sit eligendi aspernatur dolorem nesciunt consequatur sequi laboriosam?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate alias excepturi sit eligendi aspernatur dolorem nesciunt consequatur sequi laboriosam?</p>
-            <p class="specialFeed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate alias excepturi sit eligendi aspernatur dolorem nesciunt consequatur sequi laboriosam?</p>
-            <span id="feed_observer_target">Ewo</span>
-            <h3 id="loading_indicator">Loading...</h3>
-        </div> -->
-
-        <div class="cardWrapper" id="cardWrapper">
-            <span id="insertRef"></span>
-        </div>
-        <div class="noImagesIndicator">
-            <p>You have no images to be displayed. Enter a search term or simply click on Add below</p>
-        </div>
-        <button id="fetch_more_images" >Add Images</button>
+        <section class="cards">
+            <div class="cardWrapper" id="cardWrapper"></div>
+            <div class="howToBlurbText">
+                <p>Start by typing a search text in the first input field</p>
+                <p>The search text may contain the category of images you want. <br> Example: Travel, Lifestyle, Computers, Sports, etc.</p>
+                <p>You can also adjust the number of images you want. Default is 3</p>
+                <p>Note: You cannot show less than 3 images</p>
+            </div>
+            <div class="noImagesIndicator">
+                <h1>No images match your criteria</h1>
+                <p>Please try another search with a better serch text</p>
+            </div>
+        </section>
     </div>
+    <footer>
+       <p>
+        All images are from the website <a href="https://pixabay.com">Pixabay.com</a>
+       </p>
+    </footer>
     <script src="./index.js"></script>
 </body>
 </html>

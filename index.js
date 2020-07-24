@@ -7,8 +7,17 @@ const cardWrapper = document.querySelector('#cardWrapper');
 
 const searchQuery = document.querySelector('.inputField');
 const categorySelect = document.querySelector('.categorySelect');
-const category = categorySelect.options[categorySelect.selectedIndex]
 const numberOfImages = document.querySelector('.numberOfImagesField')
+const noImagesIndicator = document.querySelector('.noImagesIndicator')
+const howToBlurbText = document.querySelector('.howToBlurbText')
+const form = document.querySelector('form.inputContainer')
+const searchImagesBtn = document.querySelector('#searchImages')
+
+window.addEventListener("DOMContentLoaded", () => {
+    howToBlurbText.style.display = 'block';
+})
+
+let images = [];
 
 let page = 1;
 
@@ -27,6 +36,7 @@ const getImages = async (numberOfImages, category, searchQuery) => {
             user: hit.user
         }
     })
+    images = [...images, ...imageData];
     return imageData;
 }
 
@@ -44,28 +54,34 @@ const addImagesToTheDOM = (images) => {
 
         const paragraphEl = document.createElement('p');
 
-
         imageEl.src = image.largeImageURL;
         cardImage.appendChild(imageEl);
 
-        paragraphEl.innerHTML = `Photo by <a href="${image.pageURL}">${image.user}</a>`
+        paragraphEl.innerHTML = `Photo by <a href="${image.pageURL}" target="_blank">${image.user}</a>`
         cardText.appendChild(paragraphEl)
 
         card.appendChild(cardImage);
         card.appendChild(cardText);
         // Add recent images first
-        cardWrapper.insertBefore(card, insertRef);   
+        const firstCard = cardWrapper.firstChild;
+        cardWrapper.insertBefore(card, firstCard);
     }
 
     images.forEach(image => {
         createImageCard(image);
     })
-
 }
 
-fetchImagesBtn.addEventListener("click", async (e) => {
+form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    howToBlurbText.style.display = "none";
     const images = await getImages(numberOfImages.value, "", searchQuery.value);
+    if(!images.length) {
+        cardWrapper.innerHTML=""
+        noImagesIndicator.style.display = "block";
+        return;
+    }
+    noImagesIndicator.style.display = "none";
     addImagesToTheDOM(images)
 })
 
