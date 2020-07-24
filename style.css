@@ -56,10 +56,6 @@ head, body {
         width: 70px;
         margin: 5px auto;
     }
-    /* .d {
-        display: inline-block;
-        width: 70%;
-    } */
 
 } 
 
@@ -122,7 +118,7 @@ section.cards {
 @media screen and (max-width: 600px) {
     .howToBlurbText {
         width: 70%;
-        margin: 100px auto 0px;
+        margin: 150px auto 0px;
     }
 }
 
