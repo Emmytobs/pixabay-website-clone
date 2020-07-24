@@ -75,8 +75,7 @@ section.cards {
 
 @media screen and (max-width: 600px) {
     .cardWrapper {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(50px, 1fr));
+        display: block;
     }
 } 
 
