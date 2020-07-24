@@ -129,6 +129,12 @@ section.cards {
     text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+    .noImagesIndicator{
+        margin: 150px auto 0px;
+    }
+}
+
 footer {
     position: fixed;
     bottom: 0;
