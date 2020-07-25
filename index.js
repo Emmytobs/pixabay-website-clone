@@ -84,34 +84,3 @@ form.addEventListener("submit", async (e) => {
     noImagesIndicator.style.display = "none";
     addImagesToTheDOM(images)
 })
-
-// getImages(pixabayUrl);
-
-// let feedObserverTarget = document.querySelector('span#feed_observer_target')
-
-// const endOfFeedObserver = new IntersectionObserver((entries, endOfFeedObserver) => {
-    
-//     entries.forEach(entry => {
-//         if(!entry.isIntersecting) {
-//             return;
-//         };
-//         const feed = document.querySelector('.feed')
-//         const loadingIndicator = document.querySelector('#loading_indicator')
-//         loadingIndicator.style.display = 'block';
-//         for(let num = 1; num <= 6; num++) {
-//             const pEl = document.createElement('p');
-//             pEl.innerHTML = 'blackLorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate alias excepturi sit eligendi aspernatur dolorem nesciunt consequatur sequi laboriosam?'
-//             setTimeout(() => {
-//                 feed.insertBefore(pEl, feedObserverTarget)
-//             }, 1000)
-//         }
-//     })
-// }, {
-//     root: null,
-//     threshold: 1,
-//     rootMargin: '0px'
-// })
-
-// endOfFeedObserver.observe(feedObserverTarget);
-
-// const categories = ["backgrounds", "fashion", "nature", "science", "education", "feelings", "health", "people", "religion", "places", "animals", "industry", "computer", "food", "sports", "transportation", "travel", "buildings", "business", "music"];
